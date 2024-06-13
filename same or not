@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n, m;
+    scanf("%d %d", &n, &m);
+    if (n != m) {
+        printf("Not Same\n");
+        return 0;
+    }
+    int arr1[n], arr2[m];
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr1[i]);
+    }
+    for (int i = 0; i < m; i++) {
+        scanf("%d", &arr2[i]);
+    }
+   for (int i = 0; i < n; i++) {
+        if (arr1[i] != arr2[i]) {
+            printf("Not Same\n");
+            return 0;
+        }
+    }
+    printf("Same\n");
+    return 0;
+}
