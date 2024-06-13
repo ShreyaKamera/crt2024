@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+void findEmployeesInRange(int num, int start, int end, int distances[]) {
+    for (int i = 0; i < num; i++) {
+        if (distances[i] >= start && distances[i] <= end) {
+            printf("%d ", distances[i]);
+        }
+    }
+    printf("\n");
+}
+int main() {
+    int num, start, end;
+    scanf("%d %d %d", &num, &start, &end);
+
+    int *distances = (int *)malloc(num * sizeof(int));
+    if (distances == NULL) {
+        return -1;
+    }
+    for (int i = 0; i < num; i++) {
+        scanf("%d", &distances[i]);
+    }
+    findEmployeesInRange(num, start, end, distances);
+    free(distances);
+    return 0;
+}
