@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int numSize;
+    scanf("%d", &numSize);
+     int numbers[numSize];
+    for (int i = 0; i < numSize; i++) {
+        scanf("%d", &numbers[i]);
+    }
+    int sum = 0;
+    for (int i = 0; i < numSize; i++) {
+        sum += numbers[i];
+        printf("%d ", sum);
+    }
+    return 0;
+}
