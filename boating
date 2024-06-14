@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int weight_limit, num_adults, num_children;
+    scanf("%d %d %d", &weight_limit, &num_adults, &num_children);
+    int total_weight = num_adults * 75 + num_children * 30;
+    if (total_weight <= weight_limit)
+        printf("Boat is stable\n");
+    else
+        printf("Boat will drown\n");
+    return 0;
+}
