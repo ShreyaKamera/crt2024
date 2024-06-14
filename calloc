@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int *a,i;
+    a=(int*)malloc(5*sizeof(int));
+    printf("enter 5 elements");
+    for(i=0;i<5;i++)
+    {
+        scanf("%d",(a+i));
+    }
+    printf("values are \n");
+    for(i=0;i<5;i++)
+    {
+        printf("%d address=%u\n",*(a+i),(a+i));
+    }
+}
