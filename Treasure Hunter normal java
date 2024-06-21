@@ -1,0 +1,20 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        int Gold_coins, BenS, BBS;
+        Scanner s=new Scanner(System.in);
+        Gold_coins=s.nextInt();
+        BenS=s.nextInt();
+        BBS=s.nextInt();
+   int Bens_gold=Gold_coins*BenS/100;
+   Gold_coins =Gold_coins - Bens_gold;
+   int BB_Gold=Gold_coins * BBS/100;
+   Gold_coins= Gold_coins- BB_Gold;
+   int P_Gold=Gold_coins/3;
+   System.out.printf("%d\n%d\n%d", Bens_gold, BB_Gold, P_Gold);
+        
+    }
+}
