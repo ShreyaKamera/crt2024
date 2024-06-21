@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int quantity = scanner.nextInt();
+        int pricePerUnit = scanner.nextInt();
+        int totalAmount = quantity * pricePerUnit;
+        double discount = 0.0;
+        if (quantity > 200) {
+            discount = 0.2 * totalAmount;
+        }
+         double amountAfterDiscount = totalAmount - discount;
+        double gst = 0.18 * amountAfterDiscount;
+        double netAmountPayable = amountAfterDiscount + gst;
+        System.out.println("Quantity Ordered " + quantity);
+        System.out.println("Price per item is Rs." + pricePerUnit);
+        System.out.println("Total Amount = Rs." + totalAmount);
+        
+        if (discount > 0) {
+            System.out.println("Discount Earned = Rs." + discount);
+            System.out.println("Amount after Discount - Rs." + amountAfterDiscount);
+        }
+        System.out.println("GST - Rs." + gst);
+        System.out.println("Net Amount Payable is Rs." + netAmountPayable);
+        
+        scanner.close();
+    }
+}
