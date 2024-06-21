@@ -1,0 +1,15 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        float a;
+        Scanner s = new Scanner(System.in);
+        a = s.nextFloat();
+        
+        System.out.printf("%d\n", (int) a); 
+        System.out.printf("%.1f\n", Math.ceil(a));  
+        System.out.printf("%.1f\n", Math.floor(a)); 
+    }
+}
