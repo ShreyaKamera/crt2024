@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int userpoints = scanner.nextInt();
+        scanner.close();
+        if (userpoints >= 30 && userpoints <= 50) {
+            System.out.println("Average");
+        } else if (userpoints >= 51 && userpoints <= 60) {
+            System.out.println("Good");
+        } else if (userpoints >= 61 && userpoints <= 80) {
+            System.out.println("Excellent");
+        } else if (userpoints >= 81 && userpoints <= 100) {
+            System.out.println("Outstanding");
+        } else {
+            System.out.println("Invalid Input");
+        }
+    }
+}
