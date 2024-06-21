@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String args[] ) throws Exception {
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        for(int i=1;i<=n;i++)
+        {
+            int a=s.nextInt();
+            char c=s.next().charAt(0);
+            int b=s.nextInt();
+            if(c=='>')
+            {
+                if(a>b)
+                    System.out.println("Right");
+                else
+                    System.out.println("Wrong");
+            }
+            else if(c=='<')
+            {
+                if(a<b)
+             System.out.println("Right");
+             System.out.println("Wrong");
+            }
+        }
+    }
+}
+                    
