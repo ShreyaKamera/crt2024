@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int day = scanner.nextInt();
+        int month = scanner.nextInt();
+        int year = scanner.nextInt();
+        int numberOfStudents = scanner.nextInt();
+        scanner.close();
+        if (isCinemaDay(day, month, year, numberOfStudents)) {
+            System.out.println("Cinema Day");
+        } else {
+            System.out.println("Not a Cinema Day");
+        }
+    }
+    private static boolean isCinemaDay(int day, int month, int year, int numberOfStudents) {
+        if ((day + month + year) % 12 != 0) {
+            return false;
+        }
+        if (numberOfStudents > 50 && numberOfStudents < 100) {
+            return true;
+        }
+        return false;
+    }
+}
