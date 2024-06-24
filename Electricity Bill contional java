@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+
+public class ElectricityBill {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int units = scanner.nextInt();
+        int bill = calculateBill(units);
+        System.out.println("Rs." + bill);
+    }
+
+    public static int calculateBill(int units) {
+        int billAmount = 0;
+
+        if (units <= 200) {
+            billAmount = (int) (units * 0.5);
+        } else if (units <= 400) {
+            billAmount = (int) (200 * 0.5 + (units - 200) * 0.65 + 100);
+        } else if (units <= 600) {
+            billAmount = (int) (200 * 0.5 + 200 * 0.65 + (units - 400) * 0.80 + 200);
+        } else if (units > 600) {
+            billAmount = (int) (200 * 0.5 + 200 * 0.65 + 200 * 0.80 + (units - 600) * 1.25 + 425);
+        }
+
+        return billAmount;
+    }
+}
